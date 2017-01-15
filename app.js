@@ -9,7 +9,6 @@ const routes = require('./routes');
 const app = express();
 
 // require('./lib/mailer.js')();
-
 const mongoose = require('mongoose');
 mongoose.connect(config.mongo.devConString);
 
