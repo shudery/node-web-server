@@ -1,0 +1,14 @@
+<div class="margin100">
+	<h1>about page</h1>
+	<form>
+		<input type="hidden" id="hidden" name="referrer">
+		<label for="name">from:<input type="text" id="fieldName" name="from"></label>
+	</form>	
+</div>
+<script>
+	window.onload = function(){
+		document.getElementById('hidden').value = document.referrer;
+		document.getElementById('fieldName').value = document.referrer;
+		console.log(document.getElementById('hidden').value)
+	}
+</script>

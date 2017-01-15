@@ -1,0 +1,20 @@
+{
+  "name": "node-web-server",
+  "description": "web application based node,mongoDB,express",
+  "main": "app.js",
+  "authors": [
+    "daguo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/shudery/node-web-server",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "^2.2.6"
+  }
+}

@@ -1,0 +1,24 @@
+{{#if cookie}}
+{{#contentFor "bodyend"}}
+<script>
+	var root = document.querySelector('.bgcolor .right')
+	root.childNodes.forEach((val)=>{
+		val.remove();
+	})
+	root.innerHTML = '</div><a class="item" href="/signout">SIGNOUT</a><div class="post-user">';
+</script>
+{{/contentFor}}
+{{/if}}
+<header class="bgcolor">
+	<div class="ui secondary pointing menu huge">
+	  <a class="active item" href="/">HOME </a>
+	  <a class="item info">MESSAGES ,</a>
+	  <a class="item info">FRIENDS </a>
+	  <a class="item info">GITHUB </a>
+	  <a class="item info" href="/admin">ADMIN </a>
+	  <div class="right menu">
+	    <a class="ui item" href="/signin"><i class="user icon"></i>SIGN IN</a>
+	    <a class="ui item" href="/signup"></i>SIGN UP</a>
+	  </div>
+	</div>
+</header>

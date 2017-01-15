@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{{block "title"}}}</title>
+	{{{block "headstart"}}}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='icon' href='/img/favicon.ico'>
+	<link rel='stylesheet' href='/vendor/mocha.css'>
+	<link rel='stylesheet' href='/bower_components/semantic/dist/semantic.min.css'>
+	<link rel='stylesheet' href='{{static '/css/style.css'}}'>
+	<script src='/js/test.js'></script>
+	<script src='/vendor/mocha.js'></script>
+	<script src='/vendor/chai.js'></script>
+	{{#if globalTestPath}}
+		<div id="mocha"></div>
+		<script>
+		mocha.ui('tdd');
+		var assert = chai.assert;
+		// var expect = chai.expect;
+		</script>
+		<script src='{{globalTestPath}}'></script>
+		{{#if pageTestPath}}
+			<script src='{{pageTestPath}}'></script>
+		{{/if}}
+		<script>mocha.run()</script>
+	{{/if}}
+	{{{block "headend"}}}
+</head>
+<body>
+	{{{body}}}
+	{{{block "bodyend"}}}
+</body>
+{{{block "htmlend"}}}
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "node-web-server",
+  "version": "1.0.0",
+  "description": "web application based node,mongoDB,express",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha ./public/test/unit.test.js",
+    "cross": "mocha -u tdd -R spec ./public/test/crosspage.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shudery/node-web-server.git"
+  },
+  "author": "daguo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "daguo": "^1.0.4",
+    "express": "^4.14.0",
+    "md5": "^2.2.1",
+    "mongoose": "^4.7.2",
+    "mongoose-simple-random": "^0.3.3",
+    "nodemailer": "^2.6.4",
+    "superagent": "^3.3.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "colors": "^1.1.2",
+    "css-loader": "^0.26.1",
+    "express-hbs": "^1.0.3",
+    "loadtest": "^2.2.1",
+    "mocha": "^3.1.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "zombie": "^5.0.5"
+  }
+}

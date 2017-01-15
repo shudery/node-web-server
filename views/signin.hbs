@@ -1,0 +1,32 @@
+{{#contentFor "headend"}}
+<style>
+.login{
+	width:30%;
+	margin: 50px auto;
+	min-width: 300px;
+}
+</style>
+{{/contentFor}}
+{{> header}}
+<div class="login">
+	<form class="ui form" action="/signin" method="POST">
+	  <span class="red">{{error}}</span>
+	  <span class="green">{{info}}</span>
+	  <div class="field">
+	    <label>username</label>
+	    <input type="text" name="username" placeholder="username">
+	  </div>
+	  <div class="field">
+	    <label>password</label>
+	    <input type="text" name="password" placeholder="password">
+	  </div>
+	  <div class="field">
+	    <div class="ui checkbox">
+	      <input type="checkbox" tabindex="0" class="hidden">
+	      <label>I agree to the Terms and Conditions</label>
+	    </div>
+	  </div>
+	  <button class="ui primary basic button" type="submit">log in</button>
+	</form>
+</div>
+

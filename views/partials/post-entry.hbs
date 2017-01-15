@@ -1,0 +1,34 @@
+
+<div class="post">
+	<div class="post-header">
+		<i class="tag icon large green"></i>Design
+	</div>
+	<div class="cancle">
+		<i class="remove icon"></i>
+	</div>
+	<div class="post-info">
+		<div class="post-user"></div>
+		<div class="post-date">Dy <span class="green">{{author}}</span> in <span class="green">{{site}}</span><br/>about 2 month ago in <span class="green">{{toDateLabel createAt}}</span></div>
+	</div>
+	<div class="post-content">
+		<a href="/article/{{id}}">
+			<div class="post-image" id='{{id}}'>
+				{{{img}}}
+			</div>
+		</a>
+		<div class="post-desc">
+			<a href="/article/{{id}}"><p class="post-title">{{title}}</p></a>
+		</div>
+	</div>
+	<div class="post-footer">
+		<div class="footer-left">
+		<i class="thumbs outline down icon large"></i>
+		<i class="thumbs outline up icon large"></i>
+		<i class=" star icon large yellow"></i>
+		<i class=" heart icon large red"></i><span class="green">{{star}}</span>
+		</div>
+		<div class="footer-right">
+		<a href="/article/{{id}}"><span class="green">{{rank}} </span><i class="leanpub icon large"></i><span class="green"> READ </span></a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+{{> header}}
+<div class="container-list">
+		{{#each datas}}
+		<form class="ui form myform" action="/update" method="POST">
+			<input type="hidden" name="id" value="{{id}}">
+		    <div class="field">
+		      <label>title</label>
+		      <input type="text" name="title" value="{{title}}">
+		    </div>
+		    <div class="field">
+		      <label>author</label>
+		      <input type="text" name="author" value="{{author}}">
+		    </div>
+		    <div class="field">
+		      <label>tags</label>
+		      <input type="text" name="tags" value="{{tags}}">
+		    </div>
+		    <div class="field">
+		      <label>site</label>
+		      <input type="text" name="site" value="{{site}}">
+		    </div>
+		    <div class="field">
+		      <label>content</label>
+    		<textarea name="content" rows="20" cols="50" placeholder="Write something here">{{content}}</textarea>
+		    </div>
+		    <button class="ui button" type="submit">Submit</button>
+		</form>
+		{{/each}}
+</div>

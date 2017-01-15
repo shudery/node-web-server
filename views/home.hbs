@@ -1,0 +1,40 @@
+{{#contentFor "title"}}
+{{pageTitle}}
+{{/contentFor}}
+
+{{> header}}
+<div class="container">
+		<div class="mainleft">
+			<div class="ui tabular menu">
+			  <a class="item" href="/tag1">segmentfault </a>
+			  <a class="item" href="/tag2">xitu</a>
+			  <a class="item" href="/"><span class="green">Refresh</span></a>
+			  <div class="right menu">
+			    <div class="item">
+			      <div class="ui transparent icon input">
+			        <input type="text" name="search" placeholder="SEARCH ARTICLE">
+			        <i class="search link icon"></i>
+			      </div>
+			    </div>
+	 		 </div>
+			</div>
+
+			{{#each datas}}
+				{{> post-entry}}
+			{{/each}}
+			 <a href="/"><button id="bottom" class="ui basic button green">
+			 	<span class="green">Refresh</span>
+			 </button></a>
+
+		</div>
+		<div class="mainright">
+			{{> side}}
+		</div>
+
+</div>
+{{> footer}}
+{{#contentFor "bodyend"}}
+<script>
+	document.querySelectorAll('.tabular a')[{{count}}].className += ' active'
+</script>
+{{/contentFor}}

@@ -1,0 +1,29 @@
+{{#contentFor "headend"}}
+<style>
+.admin-info{
+	float:left;
+}
+.admin-button{
+	float:right;
+}
+</style>
+{{/contentFor}}{{> header}}
+<div class="container-list">
+	  <div class="ui relaxed divided list">
+	  {{#each datas}}
+		  <div class="item">
+		    <div class="content admin-info">
+		      <div><a class="header"><i class="large github middle aligned icon green"></i>{{title}}</a></div>
+		      <div class="description">{{author}} at {{createAt}}</div>
+		    </div>
+		    <div class="admin-button">
+		    	<a href="/update?id={{id}}"><div class="ui button green">update</div></a>
+		      <a href="/del?id={{id}}"><div class="ui button red">delete</div></a>
+		      <a href="/add"><div class="ui button yellow">add</div></a>
+		    </div>
+		  </div>
+		{{/each}}
+	</div>
+	
+</div>
+

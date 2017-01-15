@@ -1,0 +1,26 @@
+{{> header}}
+<div class="container-list">
+  <form class="ui form myform" action="/add" method="POST">
+    <div class="field">
+      <label>title</label>
+      <input type="text" name="title" placeholder="title">
+    </div>
+    <div class="field">
+      <label>author</label>
+      <input type="text" name="author" placeholder="author">
+    </div>
+    <div class="field">
+      <label>tags</label>
+      <input type="text" name="tags" placeholder="tags">
+    </div>
+    <div class="field">
+      <label>site</label>
+      <input type="text" name="site" placeholder="site">
+    </div>
+    <div class="field">
+      <label>content</label>
+    <textarea name="content" rows="10" cols="50" placeholder="Write something here"></textarea>
+    </div>
+    <button class="ui button" type="submit">Submit</button>
+</form>
+</div>

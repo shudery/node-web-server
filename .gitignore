@@ -1,0 +1,5 @@
+node_modules
+doc
+credentials.js
+bower_components
+lib/config.js
