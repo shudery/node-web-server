@@ -19,16 +19,15 @@
     "daguo": "^1.0.4",
     "express": "^4.14.0",
     "md5": "^2.2.1",
+    "colors": "^1.1.2",
+    "express-hbs": "^1.0.3",
     "mongoose": "^4.7.2",
-    "mongoose-simple-random": "^0.3.3",
     "nodemailer": "^2.6.4",
     "superagent": "^3.3.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "colors": "^1.1.2",
     "css-loader": "^0.26.1",
-    "express-hbs": "^1.0.3",
     "loadtest": "^2.2.1",
     "mocha": "^3.1.2",
     "style-loader": "^0.13.1",
