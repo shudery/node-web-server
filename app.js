@@ -27,6 +27,11 @@ hbs.registerHelper('toDateLabel', (name) => hbsHelpers.toDateLabel(name));
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
+app.all('*', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 routes(app);
 
 //listen to port
