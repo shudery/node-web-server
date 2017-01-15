@@ -10,7 +10,10 @@ const app = express();
 
 // require('./lib/mailer.js')();
 const mongoose = require('mongoose');
-mongoose.connect(config.mongo.devConString);
+const db = (process.env.NODE_ENV === 'production' ? config.mongo.proConString : config.mongo.devConString);
+console.log(process.env.NODE_ENV);
+console.log(process)
+mongoose.connect(db);
 
 //set template engine
 var hbs = require('express-hbs');
