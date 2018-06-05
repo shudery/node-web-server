@@ -1,70 +1,75 @@
-{{#contentFor "title"}}
-{{data.title}}
-{{/contentFor}}
-{{#contentFor 'headend'}}
+{{#contentFor "title"}} {{data.title}} {{/contentFor}} {{#contentFor 'headend'}}
 <style>
-.article-header{
-	font-size:120%;
-}
-.article-title{
-	font-size:300%;
-	font-weight: bolder;
-	margin: 30px 0;
-	line-height: 100%;
-}
-.article-content{
-	margin: 50px 0;
-	line-height: 1.6;
-	font-size:120%;
-	min-height: 500px;
-}
-.article-section{
-	margin: 25px 0;
-
-}
-.article-section p{
-	/*margin: 20px 0;*/
-}
-.article{
-	width: 60%;
-	margin: 50px auto;
-}
-@media (max-width: 1000px){
-	.article{
-		width:80%;
-
-	}
-	.bgcolor{
-		overflow: hidden;
+	.article-header {
+		font-size: 120%;
 	}
 
-}
-@media(max-width: 600px){
-	.article-title{
-		font-size:200%;
+	.article-title {
+		font-size: 300%;
 		font-weight: bolder;
 		margin: 30px 0;
 		line-height: 100%;
 	}
-	.article-content{
+
+	.article-content {
 		margin: 50px 0;
 		line-height: 1.6;
-		font-size:80%;
+		font-size: 120%;
+		min-height: 500px;
 	}
-	.bgcolor{
-		display: none;
+
+	.article-section {
+		margin: 25px 0;
+
 	}
-}
+
+	.article-section p {
+		/*margin: 20px 0;*/
+	}
+
+	.article {
+		width: 60%;
+		margin: 50px auto;
+	}
+
+	@media (max-width: 1000px) {
+		.article {
+			width: 80%;
+
+		}
+		.bgcolor {
+			overflow: hidden;
+		}
+
+	}
+
+	@media(max-width: 600px) {
+		.article-title {
+			font-size: 200%;
+			font-weight: bolder;
+			margin: 30px 0;
+			line-height: 100%;
+		}
+		.article-content {
+			margin: 50px 0;
+			line-height: 1.6;
+			font-size: 80%;
+		}
+		.bgcolor {
+			display: none;
+		}
+	}
 </style>
-{{/contentFor}}
-{{> header}}
+{{/contentFor}} {{> header}}
 
 <div class="article">
 	<div class="article-header">
 		<div class="post-user"></div>
 		<div class="post-date">
-			<p>{{data.author}}<span class="grey"> posted on </span>{{data.createAt}}</p>
-			<p><span class="grey">publish in </span>{{data.site}} </p>
+			<p>{{data.author}}
+				<span class="grey"> posted on </span>{{data.createAt}}</p>
+			<p>
+				<span class="grey">publish in </span>{{data.site}} </p>
 		</div>
 	</div>
 	<div class="article-title">

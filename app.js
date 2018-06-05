@@ -9,10 +9,9 @@ const routes = require('./routes');
 const app = express();
 
 // require('./lib/mailer.js')();
+// mlab的数据库服务非常慢
 const mongoose = require('mongoose');
-const db = (process.env.NODE_ENV === 'production' ? config.mongo.proConString : config.mongo.devConString);
-console.log(process.env.NODE_ENV);
-console.log(process)
+const db = (process.env.NODE_ENV === 'production') ? config.mongo.proConString : config.mongo.devConString;
 mongoose.connect(db);
 
 //set template engine
@@ -27,10 +26,10 @@ hbs.registerHelper('toDateLabel', (name) => hbsHelpers.toDateLabel(name));
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
-app.all('*', function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-});
+// app.all('*', function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     next();
+// });
 
 routes(app);
 

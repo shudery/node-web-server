@@ -4,6 +4,7 @@
   "description": "web application based node,mongoDB,express",
   "main": "app.js",
   "scripts": {
+    "dev": "node app.js",
     "test": "mocha ./public/test/unit.test.js",
     "cross": "mocha -u tdd -R spec ./public/test/crosspage.test.js"
   },
@@ -15,12 +16,16 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
     "cookie-parser": "^1.4.3",
     "daguo": "^1.0.4",
     "express": "^4.14.0",
-    "md5": "^2.2.1",
-    "colors": "^1.1.2",
     "express-hbs": "^1.0.3",
+    "hnpm": "^1.1.0",
+    "http-proxy": "^1.16.2",
+    "http-proxy-middleware": "^0.17.4",
+    "install": "^0.10.0",
+    "md5": "^2.2.1",
     "mongoose": "^4.7.2",
     "nodemailer": "^2.6.4",
     "superagent": "^3.3.1"
